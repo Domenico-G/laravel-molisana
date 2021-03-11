@@ -1,5 +1,4 @@
 @php
-    // il data lo mettiamo qui inizialmente poi lo sposteremo in config
     $data = '[
       {
         "src": "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
@@ -126,28 +125,20 @@
 @endphp
 
 
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Molisana</title>
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    </head>
-    <body>
-        <main>
-            <div class="container-pasta">
-                <div class="row">
-                    @foreach ($arrayPasta as $key => $pasta)
-                    <div class="col"><a href="{{url("/prodotti/{$key}")}}">
-                        {{$key + 1}}: {{$pasta["tipo"]}} <br/>
-                    </a>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </main>
+ @extends('layouts.main_layout')
 
-  
-    </body>
-</html>
+
+@section('content')
+    <div class="container-pasta">
+    <div class="row">
+        @foreach ($arrayPasta as $key => $pasta)
+        <div class="col"><a href="{{url("/prodotti/{$key}")}}">
+            {{$key + 1}}: {{$pasta["titolo"]}} <br/>
+        </a>
+        </div>
+        @endforeach
+    </div>
+</div>
+@endsection
+
+

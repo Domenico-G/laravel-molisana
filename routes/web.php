@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/home', function () {
-    return view('home');
+    return view('components.body');
 });
 
 Route::get('/prodotti/{id}', function ($id) {
