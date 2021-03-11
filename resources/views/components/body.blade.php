@@ -132,8 +132,10 @@
     <div class="container-pasta">
     <div class="row">
         @foreach ($arrayPasta as $key => $pasta)
-        <div class="col"><a href="{{url("/prodotti/{$key}")}}">
-            {{$key + 1}}: {{$pasta["titolo"]}} <br/>
+        <div class="col">
+          <a href="{{url("/prodotti/{$key}")}}">
+           <div class="content" style="background: url('{{$pasta["src"]}}') no-repeat center center; background-size: cover;">
+           </div>
         </a>
         </div>
         @endforeach
