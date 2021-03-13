@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +15,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return view('components.body');
+
+Route::get('/', function () {
+    $arrayPasta = config('pasta');
+    return view('components.body',
+     ["arrayPasta" => $arrayPasta]);
 });
 
-Route::get('/prodotti/{id}', function ($id) {
+
+Route::get('/prodotti/{id?}', function ($id = null) {
+    $arrayPasta = config('pasta');
+    if(empty($id)){
+        return redirect("/");
+    }
+    if ($id > count($arrayPasta)) {
+        abort(404);
+    }
     return view('components.products',
-    ["idProduct" => $id]
+    ["idProduct" => $id],
+    ["array" => $arrayPasta]
 );
 });
 

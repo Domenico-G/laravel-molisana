@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: "Teko", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -41,10 +41,10 @@ header .menu .link-menu ul li {
   padding: 10px;
 }
 header .menu .link-menu ul li:hover {
-  background-color: #b3e5fc;
+  background-color: #b7dae5;
 }
 header .menu .link-menu ul li:active {
-  background-color: #b3e5fc;
+  background-color: #b7dae5;
 }
 
 main {
@@ -59,16 +59,93 @@ main .container-pasta .row {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto;
+}
+main .container-pasta .row h2 {
+  text-transform: uppercase;
+  padding-left: 5px;
+  font-size: 40px;
+  font-weight: 300;
+  color: #002D73;
+}
+main .container-pasta .row .content {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
 main .container-pasta .row .col {
   width: calc(100% / 3);
   height: 300px;
-  padding: 10px;
+  padding: 5px;
 }
 main .container-pasta .row .col .content {
   width: 100%;
   height: 100%;
   background-size: contain;
+}
+main .container-prodotto {
+  background: #b7dae5;
+}
+main .container-prodotto .row {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+main .container-prodotto .row .angle {
+  background: rgba(255, 255, 255, 0.4);
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+main .container-prodotto .row .angle i {
+  font-size: 50px;
+  color: #fff;
+}
+main .container-prodotto .row .prodotto h2 {
+  color: #002D73;
+  padding-top: 50px;
+  font-size: 35px;
+  text-align: center;
+  font-weight: 400;
+}
+main .container-prodotto .row .prodotto .descrizione {
+  color: #002D73;
+  font-size: 20px;
+  font-weight: 300;
+  padding-bottom: 30px;
+}
+main .container-prodotto .row .prodotto .img-title,
+main .container-prodotto .row .prodotto .img-package {
+  width: 100%;
+}
+main .container-prodotto .row .prodotto .img-title img,
+main .container-prodotto .row .prodotto .img-package img {
+  width: 100%;
+}
+
+footer {
+  background: url("/img/footer.jpg") no-repeat center bottom;
+  background-size: contain;
+  padding: 100px 0;
+}
+footer .container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+footer .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .container .row .col {
+  width: calc(100% / 3);
+  color: #848d9b;
+  font-size: 18px;
+  font-weight: 300;
+}
+footer .container .row .col h3 {
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
 }

@@ -4,10 +4,10 @@
     </div>
     <div class="link-menu">
         <ul>
-            <a href="{{url("/home")}}">
+            <a href="{{url("/")}}">
                 <li>Home</li>
             </a>
-            <a href="">
+            <a href="{{url("/prodotti/1")}}">
                 <li>Prodotti</li>
             </a>
             <a href="">
